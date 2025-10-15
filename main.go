@@ -2,8 +2,7 @@ package main
 
 import "time"
 
-// TODO: Define the variable turn.
-//       * we assume Task-1 has the turn initially.
+// TODO: Define the "flag [2]int " array.
 
 func Task1() {
 	for {
