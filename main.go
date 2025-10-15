@@ -1,10 +1,28 @@
 package main
 
-// TODO: declare the function Say(word string). It print the
-//	the 'word' three time.
+import "time"
 
+// TODO: Define the variable turn.
+//       * we assume Task-1 has the turn initially.
+
+func Task1() {
+	for {
+		//TODO: Complete the code.
+
+		time.Sleep(time.Second * 2)
+	}
+}
+func Task2() {
+	for {
+		//TODO: Complete the code.
+
+		time.Sleep(time.Second * 2)
+	}
+}
 func main() {
-	//TODO: Call the function Say, with param "hello" using go keyword
+	go Task1()
+	go Task2()
 
-	//TODO: Call the function Say, with param "world" without go keyword
+	for {
+	}
 }
