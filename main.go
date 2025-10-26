@@ -1,44 +1,26 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
-// TODO: Define the "flag [2]int " array.
-var flag [2]int
+// TODO: declare the shared variable x.
+var x int
 
-func Task1() {
-	for {
-		//TODO: Complete the code.
-		fmt.Println("---------Begin Section----------")
-		flag[0] = 1
-		for flag[1] == 1 {
-		}
-		fmt.Println("Critical Section")
-		flag[0] = 0
-		fmt.Println("---------Reminding Section----------")
-
-		time.Sleep(time.Second * 2)
-	}
+// TODO: define the increament() function.
+//
+//	increaments x by 1 + print the current x value.
+func increment() {
+	x++
+	fmt.Println(x)
 }
-func Task2() {
-	for {
-		//TODO: Complete the code.
-		fmt.Println("---------Begin Section----------")
-		flag[1] = 1
-		for flag[0] == 1 {
-		}
-		fmt.Println("Critical Section")
-		flag[1] = 0
-		fmt.Println("---------Reminding Section----------")
 
-		time.Sleep(time.Second * 2)
-	}
-}
 func main() {
-	go Task1()
-	go Task2()
+
+	// TODO: call increament() multiple times, with/wihtout
+	//       'go'keyword.
+	for i := 0; i < 6; i++ {
+		go increment()
+		increment()
+	}
 
 	for {
 	}
