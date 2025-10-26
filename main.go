@@ -5,6 +5,15 @@ import (
 	"time"
 )
 
+// TODO: declare the function Say(word string). It print the
+//
+//	the 'word' three time.
+func Say(word string) {
+	for i := 0; i < 3; i++ {
+		fmt.Println(word)
+	}
+}
+
 // TODO: Define the "flag [2]int " array.
 var flag [2]int
 
@@ -37,9 +46,12 @@ func Task2() {
 	}
 }
 func main() {
-	go Task1()
-	go Task2()
+	//TODO: Call the function Say, with param "hello" using go keyword
+	go Say("Hello")
 
-	for {
-	}
+	//TODO: Call the function Say, with param "world" without go keyword
+	Say("World")
+
+	time.Sleep(time.Second * 2)
+
 }
